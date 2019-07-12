@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ready-API functional testing</title>
+  <style type="text/css">
+    html,body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    }
+    #header {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      height: 50px;
+      width: 100%;
+    }
+
+    #header > h1 {
+      position: fixed;
+      left: 400px;
+      top: 10px;
+    }
+
+    #content {
+      padding: 40px;
+      margin-top: 100px;
+    }
+
+    #footer {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+    }
+
+    .code {
+
+    }
+  </style>
+</head>
+<body>
+<div id="header">
+  <a href="https://smartbear.com/product/ready-api/overview"><img src="https://smartbear.com/SmartBear/media/images/product/readyapi/Ready-API-Color-Horizontal.png" alt="Ready-API Testing" width="300" height="100" /></a>
+  <h1>Ready-API Testing</h1>
+</div>
+<div id="content">
+  <p>Ready-Api Automated testing for CAP Projects</p>
+  <br /><br />
+  <a href="../readyapi/reports/all-tests.html">Ready-API test results</a>
+
+  <h3>To Use...</h3>
+  <strong>Send a `curl` request to <span class="location">this URL</span> with the following code</strong>
+  <pre class="code">
+    $ curl --form "project=@/path/to/soapui-project.xml" \
+           --form "path=@path/to/reports" \
+           --form "option=-r" \
+           <span class="location">this URL</span>
+  </pre>
+
+  <strong>Use a REST client to POST to <span class="location"></span> with these variables</strong>
+  <ul>
+    <li><strong>project</strong> <em>- the actual content of the SoapUI project xml (Required).</em></li>
+    <li><strong>Path</strong> <em>- path where reports have to be generated (Optional).</em>
+	<li><strong>option</strong> <em>- Text or file containing Testrunner options (Optional).</em></li>
+  </ul>
+  <br /><br />
+
+<script type="application/javascript">
+  var elLocations = document.getElementsByClassName('location');
+  for (var i = 0; i < elLocations.length; i++) {
+    elLocations.item(i).innerText = location.href;
+  }
+</script>
+</body>
+</html>
